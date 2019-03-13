@@ -4,7 +4,7 @@ Created on 3/13/2019
 
 ### Project Title
 
-Exploring Bikeshare data using Python
+Exploring Bikeshare data using Python for Udacity Programming for Data Science project.
 
 ### Description
 
