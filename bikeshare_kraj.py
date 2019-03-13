@@ -126,7 +126,7 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     
-    print("\nWhat is the most commonly used start station to bike?\n")
+    print("\nWhich station do most bikers start their trip?\n")
     popular_start_station = df['Start Station'].value_counts().idxmax()
     print(popular_start_station)
     
