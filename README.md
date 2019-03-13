@@ -20,5 +20,6 @@ washington.csv
 
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
+Consulted StackOverflow forums, Python 3.6.8 documentation (https://docs.python.org/3.6/) and Pandas documentation (https://pandas.pydata.org/pandas-docs/stable/)
 
