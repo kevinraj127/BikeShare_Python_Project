@@ -1,8 +1,10 @@
 ### Date created
-Include the date you created this project and README file.
+
+Created on 3/13/2019
 
 ### Project Title
-Replace the Project Title
+
+Exploring Bikeshare data using Python
 
 ### Description
 Describe what your project is about and what it does
