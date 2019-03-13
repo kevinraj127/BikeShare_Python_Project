@@ -22,7 +22,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Please choose a city: chicago, new york city, washington\n").lower()
     while city not in cities:
         city = input('The city you selected is not valid, please select another city\n').lower()
@@ -30,12 +30,12 @@ def get_filters():
     
     
 
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # get user input for month (all, january, february, ... , june)
     month = input("Please choose a month based on the first 6 months we have data for: january through june or select all\n").lower()
     while month not in months:
         month = input('We only have data for the first 6 months (january - june), please select a valid month').lower()
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("Please choose a day of the week: monday through sunday or select all\n").lower()
     while day not in days:
         day = input('Please select a valid day (monday - sunday)').lower()
@@ -101,13 +101,13 @@ def time_stats(df):
     
 
 
-    # TO DO: display the most common day of week
+    # display the most common day of week
     bike_day = df['Day'].value_counts().idxmax()
     print("\nWhat is the most popular day to bike?\n")
     print(bike_day)
 
 
-    # TO DO: display the most common start hour
+    # display the most common start hour
     bike_hour = df['Hour'].value_counts().idxmax()
     print("\nWhat is the most popular hour in the day to bike?\n")
     print(bike_hour)
@@ -124,7 +124,7 @@ def station_stats(df):
     start_time = time.time()
    
 
-    # TO DO: display most commonly used start station
+    # display most commonly used start station
     
     print("\nWhich station do most bikers start their trip?\n")
     popular_start_station = df['Start Station'].value_counts().idxmax()
@@ -133,13 +133,13 @@ def station_stats(df):
      
 
 
-    # TO DO: display most commonly used end station
+    # display most commonly used end station
     print("\nWhich station do most bikers end their trip?\n")
     popular_end_station = df['End Station'].value_counts().idxmax()
     print(popular_end_station)
 
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # display most frequent combination of start station and end station trip
     print("\nWhat is the most frequent combination of start and end stations?\n")
     popular_combination = df.groupby(['Start Station', 'End Station']).size().idxmax()
     print(popular_combination)
@@ -161,7 +161,7 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # display total travel time
     total_duration = int(df['Trip Duration'].sum())
     total_days, total_hours, total_minutes, total_seconds = second_conversion(total_duration)
     print("\nWhat is the total travel time?\n")
@@ -171,7 +171,7 @@ def trip_duration_stats(df):
    
 
 
-    # TO DO: display mean travel time
+    # display mean travel time
     average_duration = int(df['Trip Duration'].mean())
     average_days, average_hours, average_minutes, average_seconds = second_conversion(average_duration)
     print("\nWhat is the average travel time per bike trip?\n")
@@ -188,7 +188,7 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     types_of_users = df['User Type'].value_counts()
     user_percent_breakdown = df['User Type'].value_counts(normalize=True) * 100
     print("\nWhat is the breakdown of user types?\n")
@@ -199,7 +199,7 @@ def user_stats(df):
                         
 
 
-    # TO DO: Display counts of gender
+    # Display counts of gender
     print("\nWhat is breakdown of users by gender?\n")
     if 'Gender' in df.columns:
         gender_count = df['Gender'].value_counts()
@@ -215,7 +215,7 @@ def user_stats(df):
         print("Sorry, there is no gender data in the data filters you selected, please try again")
 
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
     print("\nWhat is the earliest birth year, most recent birth year, and most common birth year of all bikers in your filters?\n")
     if 'Birth Year' in df.columns:
         earliest_birth_year = int(df['Birth Year'].min())
